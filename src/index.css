@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #020617;
+    color: #e2e8f0;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .font-hud {
+    font-family: 'Chakra Petch', sans-serif;
+  }
+}
+
+@keyframes holographic-pulse {
+  0%, 100% {
+    opacity: 0.9;
+    filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.45)) drop-shadow(0 0 35px rgba(6, 182, 212, 0.25));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 28px rgba(56, 189, 248, 0.8)) drop-shadow(0 0 60px rgba(14, 165, 233, 0.45));
+  }
+}
+
+@keyframes random-glitch-glow {
+  0% { filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.3)); }
+  15% { filter: drop-shadow(0 0 25px rgba(56, 189, 248, 0.7)) drop-shadow(0 0 45px rgba(6, 182, 212, 0.5)); }
+  18% { filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.2)); }
+  45% { filter: drop-shadow(0 0 18px rgba(56, 189, 248, 0.5)); }
+  72% { filter: drop-shadow(0 0 35px rgba(56, 189, 248, 0.85)) drop-shadow(0 0 70px rgba(14, 165, 233, 0.6)); }
+  74% { filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.3)); }
+  100% { filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.4)); }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.holo-glow {
+  animation: holographic-pulse 4s ease-in-out infinite;
+}
+
+.glitch-glow {
+  animation: random-glitch-glow 6s ease-in-out infinite;
+}
+
+.radar-rotate {
+  animation: radar-sweep 12s linear infinite;
+}
+
+.radar-rotate-reverse {
+  animation: radar-sweep 18s linear infinite reverse;
+}
+
+/* Custom cyber scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(3, 7, 18, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.3);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.6);
+}
+
+.cyber-grid {
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+    linear-gradient(to right, rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px, 32px 32px, 32px 32px;
+}

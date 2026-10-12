@@ -1,0 +1,8 @@
+{
+  "name": "Remix LOTUS OSINT - Cyber Intelligence HUD",
+  "description": "Cinema-grade holographic OSINT intelligence suite inspired by Jarvis, featuring interactive blooming Lotus petal graph neural nexus, username dot-connection, and Linux terminal integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
